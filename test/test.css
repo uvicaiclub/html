@@ -1,0 +1,7 @@
+/* test.css 
+for the UVic AI Club website.
+Created by Debrah Wyatt
+Nov 29, 2019 */
+
+/*Used to stop content from appearing before they're loaded*/
+#wrapper { text-align:center; background:#e0e0e0; display:none;}

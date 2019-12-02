@@ -49,14 +49,14 @@ nav li{
 }
 
 nav a{
-  color: grey;
+  color: white;
   text-transform: uppercase;
   font-size: 24px;
   text-decoration: none;
 }
 
 nav a:hover{
-  color: white;
+  color: grey;
   text-decoration: bold;
 }
 
@@ -132,3 +132,6 @@ iframe{
   padding-right: 15px;
   bottom: 0;
 }
+
+/*Used to stop content from appearing before they're loaded*/
+#wrapper { text-align:center; background:#e0e0e0; display:none;}
