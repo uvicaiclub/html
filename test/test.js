@@ -1,7 +1,7 @@
 /*
 test.js 
 for the UVic AI Club website.
-Created by Debrah Wyatt
+Created by the UVic AI Club
 Nov 29, 2019
 */
 
