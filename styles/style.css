@@ -4,8 +4,9 @@ Created by the UVic AI Club
 Sept 2019 */
 
 /*GLOBAL PARAMETERS*/
-body{
+html, body{
   background-color: #ffffffff;
+  height: 98%;
 }
 
 header{
@@ -13,18 +14,17 @@ header{
   padding: 0px;
 }
 
+main{
+  min-height: 100%;
+}
+
 footer{
   color: :white;
   background: black;
   text-align-last: right;
   padding-right: 15px;
+  margin-top: 0px
 
-  margin-left: auto;
-  margin-right: auto; 
-  margin-bottom: auto; 
-
-  /*position: absolute;*/
-  bottom: 12px;
 }
 
 div{
@@ -124,7 +124,17 @@ iframe{
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
 
+.winner{
+  max-width: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container{
+  min-height: 89%;
 }
 
 .bottom_header {
@@ -132,6 +142,3 @@ iframe{
   padding-right: 15px;
   bottom: 0;
 }
-
-/*Used to stop content from appearing before they're loaded*/
-#wrapper { text-align:center; background:#e0e0e0; display:none;}

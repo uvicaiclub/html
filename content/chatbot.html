@@ -8,73 +8,75 @@ Sept 2019
 
 <html>
 	<head>
-
-		<!-- BANNER CODE -->
-		<img src="../images/banner.png" class="banner" alt="UVic AI Club"> 
-
     	<!--Document parameters -->
 	    <meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">
 
 		<title>Chatbot</title>
-
-		<!-- This is the navigation bar -->
-		<header>
-			<div class="link_bar">
-				<nav>
-					<ul>
-						<li><a href="../index.html">home</a></li>
-						<li><a href="about.html">about</a></li>
-						<li><a href="projects.html">projects</a></li>
-						<li><a href="resources.html">resources</a></li>
-						<li><a href="chatbot.html">chatbot</a></li>	
-						<li><a href="contact.html">contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
 	</head>
 
 	<body>
-		<br>
-		<h1>This is the UVic AI Club Chatbot</h1>
-		<br>
-		<br>
+		<div id="container">
 
-		<!-- THIS IS THE START OF THE CHATBOT HTML CODE -->
-		<div class="chatbot">
-			<div id="response"><br>
-			</div>
+			<!-- BANNER CODE -->
+			<img src="../images/banner.png" class="banner" alt="UVic AI Club"> 
 
+			<!-- This is the navigation bar -->
+			<header>
+				<div class="link_bar">
+					<nav>
+						<ul>
+							<li><a href="../index.html">home</a></li>
+							<li><a href="about.html">about</a></li>
+							<li><a href="projects.html">projects</a></li>
+							<li><a href="resources.html">resources</a></li>
+							<li><a href="chatbot.html">chatbot</a></li>	
+							<li><a href="contact.html">contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<main>
+			<br>
+			<h1>This is the UVic AI Club Chatbot</h1>
 			<br>
 			<br>
 
-				<input type="text" name="user_input" id="user_input" onkeydown="keyboardSubmit(event)">
+			<!-- THIS IS THE START OF THE CHATBOT HTML CODE -->
+			<div class="chatbot">
+				<div id="response"><br>
+				</div>
+
 				<br>
-				<button id="enter">Enter</button>
-				<button id="add">Add Response</button>
-			
-			<!-- ALLOWS THE ENTER KEY TO SUBMIT RESPONSES FROM THE INPUT FIELD -->
-			<script>
-			function keyboardSubmit(event) {
-			  var x = event.keyCode;
-			  if (x == 13) {  // 13 is the return key
-			  	document.getElementById("enter").click();
-			  }
-			}
-			</script>
+				<br>
 
-			<script src="../Chatbot/chatbot.js"></script>
-			
-			<script src="jquery-3.4.1.js"></script>
+					<input type="text" name="user_input" id="user_input" onkeydown="keyboardSubmit(event)">
+					<br>
+					<button id="enter">Enter</button>
+					<button id="add">Add Response</button>
+				
+				<!-- ALLOWS THE ENTER KEY TO SUBMIT RESPONSES FROM THE INPUT FIELD -->
+				<script>
+				function keyboardSubmit(event) {
+				  var x = event.keyCode;
+				  if (x == 13) {  // 13 is the return key
+				  	document.getElementById("enter").click();
+				  }
+				}
+				</script>
 
+				<script src="../Chatbot/chatbot.js"></script>
+				
+				<script src="jquery-3.4.1.js"></script>
+
+			</div>
+			<br>
+			</main>
 		</div>
-		<br>
 
+		<footer>
+			<h5>® 2019</h5>
+		</footer>
 	</body>
-
-	<footer>
-		<h5>©2019</h5>
-	</footer>
-
 </html>
