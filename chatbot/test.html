@@ -1,0 +1,73 @@
+<!-- 
+chatbot.html 
+Created by the UVic AI Club
+Sept 2019
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!--Document parameters -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <title>Chatbot</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <main>
+        <br>
+        <h1>This is the UVic AI Club Chatbot</h1>
+        <br>
+        <br>
+
+        <!-- THIS IS THE START OF THE CHATBOT HTML CODE -->
+        <div class="chatbot">
+
+          You:
+          <div id="previous_user_input">
+          </div>
+
+          <br>
+          <br>
+
+          Chatbot:
+          <div id="response">
+          </div>
+
+          <br>
+          <br>
+
+          <form id="chat" method="post">
+            <input name="user_string" id="user_string" type="text" onkeydown="keyboardSubmit(event)"/><br />
+
+            <input type="button" id="submit" onclick="Submit();" value="Submit" />
+
+            <input type="button" id="addResponse=" onclick="AddResponse()" value="Add Response">
+          </form>
+          <br>
+        </div> <!-- End of Chatbot -->
+        <br>
+      </main>
+    </div>
+    <script src="test.js"></script>
+
+      <script>
+        // Prevents usual form submission
+        $('form input').on('keypress', function(e) {
+            return e.which !== 13;
+        });
+
+        // Click Submit on "Enter" button
+        function keyboardSubmit(event) {
+          var x = event.keyCode;
+          if (x == 13) {  // 13 is the return key
+            document.getElementById("submit").click();
+          }
+        }
+    </script>
+  </body>
+</html>
