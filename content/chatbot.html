@@ -7,92 +7,97 @@ Sept 2019
 <!DOCTYPE html>
 
 <html>
-	<head>
-    	<!--Document parameters -->
-	    <meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="../styles/style.css">
-    	<script src="http://code.jquery.com/jquery-latest.js"></script>
+  <head>
+      <!--Document parameters -->
+      <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-		<title>Chatbot</title>
-	</head>
+    <title>Chatbot</title>
+  </head>
 
-	<body>
-		<div id="container">
+  <body>
+    <div id="container">
 
-			<!-- BANNER CODE -->
-			<img src="../images/banner.png" class="banner" alt="UVic AI Club"> 
+      <!-- BANNER CODE -->
+      <img src="../images/banner.png" class="banner" alt="UVic AI Club"> 
 
-			<!-- This is the navigation bar -->
-			<header>
-				<div class="link_bar">
-					<nav>
-						<ul>
-							<li><a href="../index.html">home</a></li>
-							<li><a href="about.html">about</a></li>
-							<li><a href="projects.html">projects</a></li>
-							<li><a href="resources.html">resources</a></li>
-							<li><a href="chatbot.html">chatbot</a></li>	
-							<li><a href="contact.html">contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+      <!-- This is the navigation bar -->
+      <header>
+        <div class="link_bar">
+          <nav>
+            <ul>
+              <li><a href="../index.html">home</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="projects.html">projects</a></li>
+              <li><a href="resources.html">resources</a></li>
+              <li><a href="chatbot.html">chatbot</a></li> 
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-			<main>
-			<br>
-			<h1>This is the UVic AI Club Chatbot</h1>
-			<br>
-			<br>
+      <main>
+      <br>
+      <h1>This is the UVic AI Club Chatbot</h1>
+      <br>
+      <br>
 
-			<!-- THIS IS THE START OF THE CHATBOT HTML CODE -->
-			<div class="chatbot">
+      <!-- THIS IS THE START OF THE CHATBOT HTML CODE -->
+      <div class="chatbot">
 
-	          You:
-	          <div id="previous_user_input">
-	          </div>
+            You:
+            <div id="previous_user_input"><br>
+            </div>
 
-	          <br>
-	          <br>
+            <br>
+            <br>
 
-	          Chatbot:
-	          <div id="response">
-	          </div>
+            Chatbot:
+            <div id="response"><br>
+            </div>
 
-	          <br>
-	          <br>
+            <br>
+            <br>
 
-	          <form id="chat" method="post">
-	            <input name="user_string" id="user_string" type="text" onkeydown="keyboardSubmit(event)"/><br />
+            <form id="chat" method="post">
+              <input name="user_string" id="user_string" type="text" onkeydown="keyboardSubmit(event)"><br>
+              
+              <input type="button" id="thumb_up" class="thumb_up" onclick="UpVote()">
 
-	            <input type="button" id="submit" onclick="Submit();" value="Submit" />
+              <input type="button" id="submit" onclick="Submit()" value="Submit">
 
-	            <input type="button" id="addResponse=" onclick="AddResponse()" value="Add Response">
-	          </form>
-	          <br>
-	          <script src="../chatbot/chatbot.js"></script>
+              <input type="button" id="addResponse=" onclick="AddResponse()" value="Add Response">
+              
+              <input type="button" id="thumb_down" class="thumb_down" onclick="DownVote()">
 
-		      <script>
-		        // Prevents usual form submission
-		        $('form input').on('keypress', function(e) {
-		            return e.which !== 13;
-		        });
+            </form>
+            <br>
+            <script src="../chatbot/chatbot.js"></script>
 
-		        // Click Submit on "Enter" button
-		        function keyboardSubmit(event) {
-		          var x = event.keyCode;
-		          if (x == 13) {  // 13 is the return key
-		            document.getElementById("submit").click();
-		          }
-		        }
-		    </script>
+          <script>
+            // Prevents usual form submission
+            $('form input').on('keypress', function(e) {
+                return e.which !== 13;
+            });
 
-	        </div> <!-- End of Chatbot -->
-			<br>
-			</main>
-		</div>
+            // Click Submit on "Enter" button
+            function keyboardSubmit(event) {
+              var x = event.keyCode;
+              if (x == 13) {  // 13 is the return key
+                document.getElementById("submit").click();
+              }
+            }
+        </script>
 
-		<footer>
-			<h5>® 2019</h5>
-		</footer>
-	</body>
+          </div> <!-- End of Chatbot -->
+      <br>
+      </main>
+    </div>
+
+    <footer>
+      <h5>® 2019</h5>
+    </footer>
+  </body>
 </html>

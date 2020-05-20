@@ -24,7 +24,6 @@ footer{
   text-align-last: right;
   padding-right: 15px;
   margin-top: 0px
-
 }
 
 div{
@@ -112,6 +111,24 @@ iframe{
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+input.thumb_up{
+  background: url('../images/thumb_up.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+input.thumb_down{
+  background: url('../images/thumb_down.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+input[type="button"]{
+  outline:none;
+
 }
 
 /*CONTAINERS*/

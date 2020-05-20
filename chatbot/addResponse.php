@@ -9,7 +9,7 @@
 
 
   //Insert string
-  $insert = "INSERT INTO user_strings(string, response) VALUES (\"".$previous_user_string."\", \"".$user_string."\")"; 
+  $insert = "INSERT INTO user_strings(string, response, rating) VALUES (\"".$previous_user_string."\", \"".$user_string."\", 1)"; 
   
   //Insert new response into database
   mysqli_query($db, $insert) or die('Error inserting into database.');
